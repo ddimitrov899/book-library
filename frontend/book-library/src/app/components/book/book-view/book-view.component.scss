@@ -1,0 +1,17 @@
+.book-view-section {
+  border: 3px solid #785722;
+  background-color: #02372F;
+  padding: 15px;
+  border-radius: 3px;
+  .book-info {
+    .thumbnail {
+      float: left;
+      margin: 5px 15px;
+    }
+    .section-info {
+      h3 {
+        margin: 0;
+      }
+    }
+  }
+}

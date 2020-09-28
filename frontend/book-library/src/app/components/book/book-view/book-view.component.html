@@ -1,0 +1,16 @@
+<div class="book-view-section" *ngIf="book">
+  <div class="book-info">
+    <div class="thumbnail">
+      <img [src]="book.Thumbnail" [alt]="book.Slug">
+    </div>
+    <div class="section-info">
+      <div class="title">
+        <h3>{{book.Title}}</h3>
+      </div>
+      <div class="author">
+        <h3>{{book.Author}}</h3>
+      </div>
+    </div>
+    <p [innerHTML]="book.Description"></p>
+  </div>
+</div>

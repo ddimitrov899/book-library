@@ -1,0 +1,19 @@
+.book-nav {
+  .nav-section {
+    position: absolute;
+
+    a {
+      margin: 10px;
+      color: #F8F59A;
+      cursor: pointer;
+      &:hover {
+        color: #d2d2d2;
+        font-weight: bolder;
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+}

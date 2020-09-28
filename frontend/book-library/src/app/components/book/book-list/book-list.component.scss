@@ -1,0 +1,46 @@
+.book-shelf-list {
+  .card {
+    padding: 10px;
+    background-color: #02372F;
+    max-height: 285px;
+    min-height: 285px;
+    overflow: hidden;
+    img {
+      width: 100px;
+      margin: 0 auto;
+    }
+    .edit {
+      background-color: #F8F59A;
+      right: 130px;
+    }
+
+    .view {
+      right: 70px;
+    }
+
+    .remove {
+      right: 10px;
+    }
+
+    .edit, .view, .remove {
+      width: 35px;
+      height: 35px;
+      i {
+        color: #02372F;
+        font-size: 1.2rem;
+        line-height: 33px;
+      }
+
+      &:hover  i {
+        color: #d2d2d2;
+        font-weight: bolder;
+      }
+    }
+
+    .card-content {
+      padding: 3px;
+      margin-top: 20px;
+      text-align: center;
+    }
+  }
+}

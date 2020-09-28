@@ -1,0 +1,8 @@
+<div class="row book-shelf">
+  <div class="col l3">
+    <app-book-filter (searchBox)="changeSearchTitle($event)"></app-book-filter>
+  </div>
+  <div class="col m12 l9">
+    <app-book-list [searchBox]="searchBox"></app-book-list>
+  </div>
+</div>

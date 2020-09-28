@@ -1,0 +1,6 @@
+<div class="row title-search">
+  <div class="input-field col s12" >
+    <input id="book" type="text" [value]="searchTitle" (keyup)="searchBoxParam($event)">
+    <label for="book" [class]="searchBox.length ? 'active': ''">Search Book Title</label>
+  </div>
+</div>

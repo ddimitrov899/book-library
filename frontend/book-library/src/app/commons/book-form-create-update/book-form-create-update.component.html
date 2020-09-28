@@ -1,0 +1,48 @@
+<form [formGroup]="bookForm" (ngSubmit)="submit()">
+  <div class="row">
+    <div class="input-field col s6">
+      <input id="title" type="text" name="Title" formControlName="Title" (change)="slugChange(slug)">
+      <label for="title" [class]="f.Title.value ? 'active' : ''">Title</label>
+    </div>
+    <div class="input-field col s6">
+      <input id="slug" type="text" #slug [value]="f.Title.value | slugTranslate" name="Slug" formControlName="Slug">
+      <label for="slug" [class]="f.Title.value ? 'active' : ''">Slug</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s4">
+      <input id="author" type="text" class="validate" name="Author" formControlName="Author">
+      <label for="author" [class]="f.Author.value ? 'active' : ''">Author</label>
+    </div>
+    <div class="input-field col s4">
+      <input id="genre" type="text" class="validate" name="Genre" formControlName="Genre">
+      <label for="genre" [class]="f.Genre.value ? 'active' : ''">Genre</label>
+    </div>
+    <div class="input-field col s4">
+      <input id="publisher" type="text" class="validate" name="Publisher" formControlName="Publisher">
+      <label for="publisher" [class]="f.Publisher.value ? 'active' : ''">Publisher</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s2" *ngIf="f.Thumbnail.value">
+      <img [src]="f.Thumbnail.value" [alt]="f.Slug.value">
+    </div>
+    <div class="file-field input-field col s10">
+      <div class="btn">
+        <span>File</span>
+        <input type="file" (change)="changeListener($event)">
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text" placeholder="Upload file">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+        <textarea id="description" class="materialize-textarea" data-length="120" name="Description"
+                  formControlName="Description" [style]="f.Description.value.length > 100 ? 'height: 230px;' : ''"></textarea>
+      <label for="description" [class]="f.Description.value ? 'active' : ''">Description</label>
+    </div>
+  </div>
+  <button type="submit" class="waves-effect waves-light btn-small">Save</button>
+</form>
