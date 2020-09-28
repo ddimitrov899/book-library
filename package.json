@@ -6,7 +6,8 @@
   "scripts": {
     "start-node": "node ./app.js",
     "build-production": "npm install --prefix ./frontend/book-library && npm run --prefix ./frontend/book-library build-prod",
-    "start": "npm run build-production && npm install && npm run start-node"
+    "start": "npm run build-production && npm install && npm run start-node",
+    "prod": "node ./app.js"
   },
   "keywords": [],
   "author": "DD",
